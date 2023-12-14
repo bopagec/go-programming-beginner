@@ -1,7 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
+/*
+The Go standard library provides an "errors" package that makes it easy to deal with error.
+
+# Errors.New() function can simply create an error with a custom error message as below
+
+var err error = errors.New("something went wrong!")
+*/
 func main() {
 	testDivider(10, 0)
 	testDivider(10, 2)
@@ -18,7 +28,8 @@ func (e divideError) Error() string {
 }
 func divider(dividend, divisor float64) (float64, error) {
 	if divisor == 0 {
-		return 0, divideError{dividend: dividend}
+		return 0, errors.New("no dividing by 0") // rather than creating a custom error, we can errors.New() method.
+		//return 0, divideError{dividend: dividend}
 	}
 	return dividend / divisor, nil
 }
