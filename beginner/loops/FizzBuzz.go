@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
 ASSIGNMENT
 We're hiring engineers at Textio, so time to brush up on the classic "Fizzbuzz" game,
@@ -15,8 +17,17 @@ func main() {
 
 func fizzbuzz() {
 	for i := 1; i <= 100; i++ {
-		if i%3 == 0 {
+		fizz := i%3 == 0
+		buzz := i%5 == 0
 
+		if fizz && buzz {
+			fmt.Printf("fizzbuzz (%d)\n", i)
+		} else if fizz {
+			fmt.Printf("fizz (%d)\n", i)
+		} else if buzz {
+			fmt.Printf("buzz (%d)\n", i)
+		} else {
+			fmt.Println(i)
 		}
 	}
 }
