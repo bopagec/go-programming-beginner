@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	mystrings "github.com/bopagec/go-programming-beginner/modules/mystrings"
+	"github.com/bopagec/go-programming-beginner/mystrings"
 )
 
 func main() {
-	r := mystrings.Reverse("hello world")
-	fmt.Println(r)
+	res := mystrings.Reverse("Hello")
+	fmt.Println(res)
 }
