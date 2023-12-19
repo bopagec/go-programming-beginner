@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	res := mystrings.Reverse("Hello")
-	fmt.Println(res)
+	mystrings.Reverse("Hello")
+	fmt.Println("Hello World")
 }
