@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/bopagec/go-programming-beginner/modules/mystrings"
+	mystrings "github.com/bopagec/go-programming-beginner/modules/mystrings"
 )
 
 func main() {
