@@ -1,4 +1,4 @@
-package mutexes
+package main
 
 /*
 MUTEXES IN GO
